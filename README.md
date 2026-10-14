@@ -1,2 +1,2 @@
-# lab
-Code snippets, experiments, and odd 'n sundry that might come in handy.
+# scratch_pad
+Repo for miscellaneous code and learning experiments

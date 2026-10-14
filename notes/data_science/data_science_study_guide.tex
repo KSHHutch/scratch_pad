@@ -1,0 +1,128 @@
+%---------------------------------------------
+% 			  PREAMBLE
+%---------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\counterwithin{equation}{section}
+\usepackage{setspace}
+\setlength{\topmargin}{-.25in} \setlength{\textheight}{8.75in}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
+\setstretch{1.5}
+\addtolength{\jot}{4mm}  %Equation spacing
+
+\usepackage{booktabs}
+\usepackage{xparse}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% Allows to bold math and text together
+\usepackage{bm}
+\newcommand\bolden[1]{{\boldmath\bfseries#1}}
+
+
+% When opened in Acrobat Reader, clicking on the solution will reveal/hide the solution text
+\usepackage[tikz]{ocgx2}
+\newcounter{ocgSolution}
+\setcounter{ocgSolution}{1}
+
+\newcommand{\solution}[1]{%
+\newline
+\switchocg{\theocgSolution}{Click for Solution:}
+\begin{ocg}{OCG\theocgSolution}{\theocgSolution}{0}
+#1
+\end{ocg}
+\addtocounter{ocgSolution}{1}
+}
+
+
+
+%---------------------------------------------
+% 			  HEADER
+%---------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\lhead{ \textbf { Kyle Hutchings} }
+\rhead{ \textbf { Data Science } }
+
+%---------------------------------------------
+% 			  DOCUMENT
+%---------------------------------------------
+
+\begin{document}
+
+
+%---------------------------------------------
+% 		Module 1
+%---------------------------------------------
+
+\section{Probability}
+\subsection{Introduction}
+
+\begin{enumerate}
+
+\item \bolden{What is Bayes' rule?} 
+\solution{
+    Bayes' rule gives the probability of event A happening given event B has happened:
+    $$
+    P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+    $$
+}
+
+\item \bolden{What is the Law of Total Probability?} 
+\solution{
+This is a way to think about the probability of an event occuring as a weighted sum or even an expectation-value-like setup:
+$$
+P(A) = P(A|B_1)P(B_1) + ... + P(A|B_n)P(B_n)
+$$
+For example, the probability that event $B_1$ will occur is $P(B_1)$.  The probability of $A$ occuring given $B_1$ has occured is weighted by $P(B_1)$.
+}
+
+\item \bolden{What is the permutation equation?} 
+\solution{
+The permutation equation is used when the order matters.  
+Sometimes repetition can be allowed in a permutation -- in opening a 4-number dial lock, for example, you might have 1314 where 1 shows up twice.  
+Sometimes repetition is not allowed, like drawing cards from a deck.  If I'm thinking about the probability of drawing two spades, then drawing one spade on my first draw will affect my probability of drawing another.
+$$
+\frac{n!}{(n-k)!}
+$$
+}
+
+\item \bolden{Question} 
+\solution{
+
+}
+
+\item \bolden{Question} 
+\solution{
+
+}
+
+\item \bolden{Question} 
+\solution{
+
+}
+
+\item \bolden{Question} 
+\solution{
+
+}
+
+\end{enumerate}
+
+\newpage
+
+
+
+
+
+\end{document} 
